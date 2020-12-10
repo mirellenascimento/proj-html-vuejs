@@ -6,6 +6,7 @@ body{
 p{
   font-weight: 200;
 }
+
 h1{
   font-size: 3.8rem;
 }
@@ -17,9 +18,11 @@ h3{
   font-size: 1.5rem;
 }
 
+.small-text{
+  font-size: 0.85rem;
+}
 .text-style-serif{
   font-family: 'Playfair Display', serif;
-  color: #232a33;
   font-weight: 400;
 }
 .green{
@@ -49,7 +52,7 @@ h3{
 header{
   background-color: #fcf7fb;
   background-image: url(../img/background-pattern-wavify.png);
-  color: #3F3A64;
+  color: #3e3864;
 }
 
 .top-header .col {
@@ -83,6 +86,7 @@ header{
   background: none;
   padding-top: 100px;
   padding-bottom: 0;
+  color: #232a33;
 }
 
 .jumbotron .col{
@@ -133,7 +137,12 @@ header{
 
 
 #about-me .col p:first-child{
-  margin-top: 40px;
+  /* margin-top: 60px; */
+  color: #232a33;
+}
+
+#about-me .row:first-child .col:nth-child(2) p{
+  padding-left: 100px;
 }
 
 .youtube img:first-child{
@@ -141,6 +150,7 @@ header{
   position: relative;
   width: 100%;
   border-radius: 5px;
+  box-shadow: 0 50px 30px -50px #888888;
 }
 
 .youtube img:last-child{
@@ -161,4 +171,41 @@ header{
 .youtube-test img{
   width: 100px;
   margin: 20px 0;
+}
+
+#online-courses{
+  color: #3e3864;
+  margin: 80px 0;
+}
+
+#online-courses .row:first-child .col{
+  padding: 80px 0;
+}
+
+#online-courses .card{
+  width: 32%;
+  border: none;
+  margin-bottom: 50px;
+}
+
+#online-courses .card-body{
+  padding: 0;
+}
+
+div.card-title{
+  padding-top: 30px;
+}
+
+#online-courses div.grey p{
+  padding: 0 15px 0 5px;
+}
+
+.card-title{
+  font-weight: 600;
+  line-height: 2rem;
+  margin-bottom: 0;
+}
+
+#online-courses .card-body i{
+  margin-top: 30px;
 }

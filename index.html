@@ -79,13 +79,13 @@
       <section id="about-me">
         <div class="container">
           <div class="row">
-            <div class="col-5">
+            <div class="col-5 d-flex flex-column justify-content-end">
               <p class="green">ABOUT ME</p>
               <h2 class="text-style-serif">How to Be an Alpha Male: The 15 habits of True Alphas</h2>
             </div>
-            <div class="col">
+            <div class="col d-flex flex-column justify-content-end">
               <p><b>Want to tearn how to be <span class="green">an alpha male</span>? How to be more masculine? How to be the man you've always wanted to be?</b></p>
-              <p class="grey">Your goal is to show the consistency of business, core values, and customer care. Punctuality, responsability, individuality, accuracy, enthusiasm - you have to cleary explain how these qualities are applicable to your work. And the important thing is you do love what you do.</p>
+              <p class="grey small-text">Your goal is to show the consistency of business, core values, and customer care. Punctuality, responsability, individuality, accuracy, enthusiasm - you have to cleary explain how these qualities are applicable to your work. And the important thing is you do love what you do.</p>
             </div>
           </div>
           <div class="row">
@@ -102,6 +102,41 @@
             </div>
 
           </div>
+        </div>
+
+      </section>
+      <section id="online-courses">
+        <div class="container">
+          <div class="row">
+            <div class="col d-flex flex-column justify-content-center align-items-center">
+              <p class="grey">BEGIN YOUR JOURNEY AT MAXCOACH</p>
+              <h2 class="text-style-serif">Latest <span class="green">Online Courses</span></h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col d-flex justify-content-between flex-wrap">
+              <div v-for="card in onlineCourses" class="card">
+                <div class="card-body">
+                  <img class="card-img-top" :src="card.image" alt="card image">
+                  <div class="card-title green d-flex align-items-baseline"><h4>{{card.price}}</h4><p><b>.{{card.cents}}</b></p></div>
+                  <h5 class="card-title">{{card.title}}</h5>
+                  <div class="grey d-flex align-items-baseline">
+                    <i class="far fa-newspaper"></i>
+                    <p class="small-text">{{card.lessons}}</p>
+                    <i class="far fa-user"></i>
+                    <p class="small-text">{{card.students}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col d-flex justify-content-center align-items-center">
+              <button class="green-button" type="button" name="view-all-courses">View all courses<i class="fas fa-arrow-right"></i></button>
+            </div>
+
+          </div>
+
         </div>
 
       </section>
