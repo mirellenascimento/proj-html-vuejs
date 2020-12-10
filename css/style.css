@@ -209,3 +209,31 @@ div.card-title{
 #online-courses .card-body i{
   margin-top: 30px;
 }
+
+
+#book-store{
+  color: #3e3864;
+}
+
+#book-store h2{
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+}
+#book-store ul{
+  padding: 30px 0 10px 0;
+}
+#book-store li{
+  list-style: none;
+}
+
+#book-store i{
+  padding-right: 10px;
+}
+
+#book-store h4{
+  padding-top: 50px;
+}
+
+#book-store img{
+  width: 100%;
+}
