@@ -1,0 +1,164 @@
+body{
+  font-family: 'Poppins', sans-serif;
+  color: #232a33;
+}
+
+p{
+  font-weight: 200;
+}
+h1{
+  font-size: 3.8rem;
+}
+h2{
+  font-size: 3rem;
+}
+
+h3{
+  font-size: 1.5rem;
+}
+
+.text-style-serif{
+  font-family: 'Playfair Display', serif;
+  color: #232a33;
+  font-weight: 400;
+}
+.green{
+  color: #26aa94;
+}
+
+.grey{
+  color: #6b6c6c;
+}
+.green-button{
+  border-radius: 5px;
+  border: none;
+  background-color: #26aa94;
+  color: white;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+}
+
+.green-button i{
+  margin-left: 15px;
+}
+
+.green-button:hover{
+  background-color: #3F3A64;
+}
+
+header{
+  background-color: #fcf7fb;
+  background-image: url(../img/background-pattern-wavify.png);
+  color: #3F3A64;
+}
+
+.top-header .col {
+  height: 80px;
+}
+.top-header img{
+  width: 120px;
+  line-height: 80px;
+}
+
+.top-header li{
+  display: inline-block;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.top-header li:not(:first-child){
+  margin-left: 15px;
+}
+
+.top-header div:last-child li{
+  color: #232a33;
+}
+
+.top-header nav i{
+  transform: scale(0.5);
+  padding-bottom: 5px;
+}
+
+.jumbotron{
+  background: none;
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+
+.jumbotron .col{
+  height: 500px;
+}
+
+
+.jumbotron p:nth-child(3){
+  padding: 20px 0;
+}
+
+.jumbotron img:first-child{
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 90%;
+  position: relative;
+}
+
+.jumbotron img:last-child{
+  width: 90%;
+  margin-left: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#numbers{
+  padding: 100px 0;
+}
+
+.info-numbers{
+  height: 100px;
+  min-width: 250px;
+  background-image: url(../img/background-pattern-grid-line-06.png);
+  text-align: center;
+}
+
+.info-numbers p{
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.numbers-bar {
+  background-image: url(../img/background-pattern-grid-line-06.png);
+  width: 10px;
+  height: 100px;
+}
+
+
+#about-me .col p:first-child{
+  margin-top: 40px;
+}
+
+.youtube img:first-child{
+  margin-top: 80px;
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.youtube img:last-child{
+  position: absolute;
+  top: calc(50% + 40px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.youtube-test *{
+  padding-left: 50px;
+}
+
+.youtube-test h3{
+  margin-top: 80px;
+  line-height: 3rem;
+}
+.youtube-test img{
+  width: 100px;
+  margin: 20px 0;
+}
