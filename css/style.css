@@ -319,3 +319,19 @@ div.card-title{
   border-bottom: solid 1px #26aa94;
   margin-bottom: 150px;
 }
+
+footer{
+  background-color: black;
+  color: lightgrey;
+  padding: 80px 0;
+}
+
+footer ul{
+  padding: 0;
+}
+
+footer li{
+  list-style: none;
+  display: inline-block;
+  margin-right: 15px;
+}

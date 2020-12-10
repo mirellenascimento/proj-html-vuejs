@@ -158,4 +158,50 @@ let blogPosts = [
     title: 'How to Give Yourself Grace to Start Again',
     text: 'Forgive yourself fr bad habits you may have started or...'
   },
+];
+
+let footerMenu01 = [
+  {
+    name: 'Start here',
+    link: '#'
+  },
+  {
+    name: 'Blog',
+    link: '#'
+  },
+  {
+    name: 'About us',
+    link: '#'
+  },
+  {
+    name: 'Success story',
+    link: '#'
+  },
+  {
+    name: 'Courses',
+    link: '#'
+  },
+  {
+    name: 'Contact us',
+    link: '#'
+  },
+];
+
+let footerMenu02 = [
+  {
+    name: 'Membership',
+    link: '#'
+  },
+  {
+    name: 'Purchase guide',
+    link: '#'
+  },
+  {
+    name: 'Privacy policy',
+    link: '#'
+  },
+  {
+    name: 'Terms of service',
+    link: '#'
+  },
 ]

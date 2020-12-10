@@ -239,7 +239,7 @@
           </div>
           <div class="row">
             <div class="col d-flex justify-content-center">
-              <p class="green"><b>VIEW ALL POSTS</b></p>
+              <p class="green">VIEW ALL POSTS</p>
 
             </div>
 
@@ -248,6 +248,51 @@
         </div>
 
       </section>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col d-flex flex-column">
+              <h5>Address</h5>
+              <p>{{businessAddress.address}}</p>
+              <p>{{businessAddress.phone}}</p>
+              <p>{{businessAddress.email}}</p>
+              <ul>
+                <li v-for="icon in socialIcons" href="icon.link" v-html="icon.icon"></li>
+              </ul>
+            </div>
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <div class="col-8">
+                      <h5>Explore</h5>
+                      <div class="d-flex flex-column flex-wrap">
+                        <ul>
+                          <li>blablabla</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <h5>Information</h5>
+                      <ul>
+                        <li>hshshhs</li>
+                      </ul>
+
+                    </div>
+
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </footer>
     </div>
     <!-- MAIN SCRIPT -->
     <script src="js/main.js" charset="utf-8"></script>
