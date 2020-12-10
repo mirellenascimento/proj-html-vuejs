@@ -14,6 +14,5 @@ const myWeb = new Vue({
       phone: '+1(305)547-9909 (9am - 5pm EST, Monday - Friday)',
       email: 'support@maxcoach.com',
     }
-
-  },
+  }
 });

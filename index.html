@@ -16,8 +16,8 @@
     <!-- VUE -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
-    <!-- AXIOS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <!-- FUNCTIONS -->
+    <script src="js/functions.js" charset="utf-8"></script>
 
     <!-- DATA -->
     <script src="js/data.js" charset="utf-8"></script>
@@ -29,10 +29,16 @@
     <div id="root">
       <header>
         <div class="container">
+
+          <!-- TOP HEADER -->
           <div class="row top-header">
+
+            <!-- LOGO -->
             <div class="col d-flex align-items-center">
               <img src="img/dark-logo.png" alt="logo">
             </div>
+
+            <!-- MENU -->
             <div class="col-7 d-flex align-items-center justify-content-center">
               <nav>
                 <ul>
@@ -40,20 +46,28 @@
                 </ul>
               </nav>
             </div>
+
+            <!-- SOCIAL MEDIA ICONS -->
             <div class="col d-flex align-items-center justify-content-end">
               <ul>
                 <li v-for="icon in socialIcons" href="icon.link" v-html="icon.icon"></li>
               </ul>
             </div>
           </div>
+
+          <!-- BANNER -->
           <div class="jumbotron">
             <div class="row">
+
+              <!-- LEFT - TEXT -->
               <div class="col">
                 <p>I'M WINGMAN</p>
                 <h1 class="text-style-serif">Peace On Earth A Wonderful Wish But No Way</h1>
                 <p class="grey">Success isn't overnight. It's when everyday you get a little better than the day before. Ir all adds up.</p>
                 <button class="green-button" type="button" name="get-strated-for-free">Get Started For Free<i class="fas fa-arrow-right"></i></button>
               </div>
+
+              <!-- RIGHT - IMAGE -->
               <div class="col d-flex align-items-end justify-content-center">
                 <img src="img/home-movation-shape-face.png" alt="">
                 <img src="img/home-movation-hero-image.png" alt="">
@@ -62,12 +76,13 @@
           </div>
         </div>
       </header>
+
       <section id="numbers">
         <div class="container">
           <div class="row">
             <div class="col d-flex align-items-center justify-content-between">
               <div class="info-numbers" v-for="info in sectionNumbers" class="number-cards">
-                <h2 class="green">{{info.number}}</h2>
+                <h2 class="counter green">{{info.number}}{{info.afterNumber}}</h2>
                 <p class="text-uppercase">{{info.text}}</p>
               </div>
               <div class="numbers-bar">
@@ -76,49 +91,68 @@
           </div>
         </div>
       </section>
+
       <section id="about-me">
         <div class="container">
           <div class="row">
+
+            <!-- HEADER ABOUT ME -->
             <div class="col-5 d-flex flex-column justify-content-end">
               <p class="green">ABOUT ME</p>
               <h2 class="text-style-serif">How to Be an Alpha Male: The 15 habits of True Alphas</h2>
             </div>
+
+            <!-- PARAGRAPH ABOUT ME -->
             <div class="col d-flex flex-column justify-content-end">
               <p><b>Want to tearn how to be <span class="green">an alpha male</span>? How to be more masculine? How to be the man you've always wanted to be?</b></p>
               <p class="grey small-text">Your goal is to show the consistency of business, core values, and customer care. Punctuality, responsability, individuality, accuracy, enthusiasm - you have to cleary explain how these qualities are applicable to your work. And the important thing is you do love what you do.</p>
             </div>
           </div>
+
+          <!-- TESTIMONIAL ABOUT ME -->
           <div class="row">
+
+            <!-- YOUTUBE IMAGE -->
             <div class="col-7 youtube">
               <img src="img/home-movation-video-poster-670x450.jpg" alt="video">
               <img src="img/icon-youtube-play.png" alt="youtube">
             </div>
+
+            <!-- TESTIMONIAL TEXT-->
             <div class="col youtube-test d-flex flex-column justify-content-center">
               <h3 class="text-style-serif">"Every morning you have two choices: continue to sleep with your dreams, or wake up and chase them."</h3>
               <img src="img/home-movation-shape-01.png" alt="waves">
               <h4>Kaixa Stark</h4>
               <p class="grey">WINGMAN</p>
-
             </div>
-
           </div>
         </div>
-
       </section>
+
       <section id="online-courses">
         <div class="container">
           <div class="row">
+
+            <!-- HEADER ONLINE COURSES -->
             <div class="col d-flex flex-column justify-content-center align-items-center">
               <p class="grey">BEGIN YOUR JOURNEY AT MAXCOACH</p>
               <h2 class="text-style-serif">Latest <span class="green">Online Courses</span></h2>
             </div>
           </div>
+
+          <!-- ONLINE COURSES CARDS -->
           <div class="row">
             <div class="col d-flex justify-content-between flex-wrap">
+
+              <!-- TEMPLATE VUEJS -->
               <div v-for="card in onlineCourses" class="card">
                 <div class="card-body">
                   <img class="card-img-top" :src="card.image" alt="card image">
-                  <div class="card-title green d-flex align-items-baseline"><h4>{{card.price}}</h4><p><b>.{{card.cents}}</b></p></div>
+                  <div class="card-title green d-flex align-items-baseline">
+                    <h4>${{card.price}}</h4>
+                    <p v-if="card.cents < 10"><b>.0{{card.cents}}</b></p>
+                    <p v-else><b>.{{card.cents}}</b></p>
+                  </div>
                   <h5 class="card-title">{{card.title}}</h5>
                   <div class="grey d-flex align-items-baseline">
                     <i class="far fa-newspaper"></i>
@@ -130,19 +164,21 @@
               </div>
             </div>
           </div>
+
+          <!-- ONLINE COURSES BOTTOM -->
           <div class="row">
             <div class="col d-flex justify-content-center align-items-center">
               <button class="green-button" type="button" name="view-all-courses">View all courses<i class="fas fa-arrow-right"></i></button>
             </div>
-
           </div>
-
         </div>
-
       </section>
+
       <section id="book-store">
         <div class="container">
           <div class="row">
+
+            <!-- BOOK STORE LEFT TEXT -->
             <div class="col-5 d-flex flex-column align-items-start">
               <p>BOOK STORE ONLINE</p>
               <h2 class="text-style-serif">Be Alpha With<br>
@@ -155,36 +191,66 @@
               </ul>
               <button class="green-button" type="button" name="free-book">Get Free Ebook</button>
             </div>
+
+            <!-- BOOK STORE RIGHT - BOOK 01 -->
             <div class="col-7">
               <div class="row d-flex flex-nowrap">
-                <div class="col d-flex flex-column align-items-center">
+                <div class="book-card col d-flex flex-column align-items-center">
                   <img src="img/product-book-11-400x400.jpg" alt="">
                   <h5 class="card-title">Alpha man by Maxcoach</h5>
                   <div class="green d-flex align-items-baseline"><h4>$29</h4><p><b>.00</b></p></div>
-                  <h4></h4>
+
+                  <!-- ICONS TO BE SHOWN ON HOVER -->
+                  <div class="book">
+                    <div class="d-flex justify-content-center align-items-center">
+                      <i class="fas fa-search"></i>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                      <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                      <i class="far fa-heart"></i>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                      <i class="fas fa-signal"></i>
+                    </div>
+                  </div>
                 </div>
-                <div class="col d-flex flex-column align-items-center">
+
+                <!-- BOOK STORE RIGHT - BOOK 02 -->
+                <div class="book-card col d-flex flex-column align-items-center">
                   <img src="img/product-book-10-400x400.jpg" alt="">
                   <h5 class="card-title">Real man 4.0 by Maxcoach</h5>
                   <div class="green d-flex align-items-baseline"><h4>$39</h4><p><b>.00</b></p></div>
-                  <h4></h4>
+
+                  <!-- ICONS TO BE SHOWN ON HOVER -->
+                  <div class="book">
+                    <div class="d-flex justify-content-center align-items-center">
+                      <i class="fas fa-search"></i>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                      <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                      <i class="far fa-heart"></i>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                      <i class="fas fa-signal"></i>
+                    </div>
+                  </div>
                 </div>
-
-
               </div>
-
-
             </div>
-
           </div>
-
         </div>
-
       </section>
+
       <section id="logos">
         <div class="container">
           <div class="row">
             <div class="col d-flex justify-content-between align-itens-center">
+
+              <!-- TEMPLATE FOR LOGOS -->
               <div v-for="logo in logos" class="d-flex justify-content-center align-items-center">
                 <img :src="logo" alt="logo">
               </div>
@@ -192,9 +258,12 @@
           </div>
         </div>
       </section>
+
       <section id="testimonials">
         <div class="container-fluid">
           <div class="row">
+
+            <!-- TESTIMONIALS LEFT - TEXT -->
             <div class="col d-flex flex-column justify-content-center align-items-center">
               <p class="green"><b>REAL STORIES</b></p>
               <h3>I am free to learn at my own place, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.</h3>
@@ -202,6 +271,8 @@
               <h5>Mina Hollace</h5>
               <p class="small-text grey">/ Freelancer</p>
             </div>
+
+            <!-- TESTIMONIALS RIGHT - IMAGE -->
             <div class="col">
               <img src="img/home-movation-testimonial-image.jpg" alt="">
             </div>
@@ -210,20 +281,22 @@
               <h4>1/4</h4>
               <img src="img/image (1).png" alt="arrow down">
             </div>
-
           </div>
-
         </div>
-
       </section>
+
       <section id="blog">
         <div class="container">
+
+          <!-- BLOG HEADER -->
           <div class="row">
             <div class="col">
               <p>BLOG UPDATED</p>
               <h2 class="text-style-serif">Interesting <span class="green">Articles updated</span> daily</h2>
             </div>
           </div>
+
+          <!-- TEMPLATE BLOG CARDS -->
           <div class="row">
             <div class="col d-flex justify-content-between">
               <div v-for="post in blogPosts" class="my-card">
@@ -237,63 +310,78 @@
               </div>
             </div>
           </div>
+
+          <!-- BLOG BOTTOM -->
           <div class="row">
             <div class="col d-flex justify-content-center">
               <p class="green">VIEW ALL POSTS</p>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
+
+      <!-- FIXED RIGHT BAR -->
+      <div class="fixed-lateral-bar d-flex flex-column align-items-center justify-content-around">
+        <i class="fas fa-ruler-combined"></i>
+        <i class="far fa-life-ring"></i>
+        <i class="fas fa-book"></i>
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+
       <footer>
         <div class="container">
           <div class="row">
-            <div class="col d-flex flex-column">
+
+            <!-- LEFT ADDRESS -->
+            <div class="col d-flex flex-column align-items">
               <h5>Address</h5>
               <p>{{businessAddress.address}}</p>
               <p>{{businessAddress.phone}}</p>
               <p>{{businessAddress.email}}</p>
-              <ul>
+
+              <!-- LEFT SOCIAL MEDIA ICONS -->
+              <ul id="social-icons">
                 <li v-for="icon in socialIcons" href="icon.link" v-html="icon.icon"></li>
               </ul>
             </div>
+
+            <!-- RIGHT -->
             <div class="col">
               <div class="row">
                 <div class="col">
                   <div class="row">
-                    <div class="col-8">
-                      <h5>Explore</h5>
-                      <div class="d-flex flex-column flex-wrap">
-                        <ul>
-                          <li>blablabla</li>
-                        </ul>
-                      </div>
-                    </div>
+
+                    <!-- FOOTER MENU 01 -->
                     <div class="col">
-                      <h5>Information</h5>
-                      <ul>
-                        <li>hshshhs</li>
+                      <h5>Explore</h5>
+                      <ul class="d-flex flex-column flex-wrap">
+                        <li v-for="menu in footerMenu01"><p>{{menu.name}}</p></li>
                       </ul>
-
                     </div>
 
-
+                    <!-- FOOTER MENU 02 -->
+                    <div lass="col-7">
+                      <h5>Information</h5>
+                      <ul class="d-flex flex-column flex-nowrap">
+                        <li v-for="menu in footerMenu02"><p>{{menu.name}}</p></li>
+                      </ul>
+                    </div>
                   </div>
-
                 </div>
-
               </div>
-
             </div>
-
           </div>
 
+          <!-- FOOTER COPYRIGHT -->
+          <div class="row">
+            <div class="col d-flex justify-content-center align-items-center">
+              <p>	&copy; 2020 MaxCoach. All Rights Reserved</p>
+            </div>
+          </div>
         </div>
       </footer>
-    </div>
+    </div> <!-- end #root VueJs-->
+
     <!-- MAIN SCRIPT -->
     <script src="js/main.js" charset="utf-8"></script>
 
