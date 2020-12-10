@@ -6,7 +6,7 @@
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@200;300;400;600;800&display=swap" rel="stylesheet">
     <!-- FONT AWESOME 5 - gmail account -->
     <script src="https://kit.fontawesome.com/6f40fb596f.js" crossorigin="anonymous"></script>
 
@@ -181,7 +181,41 @@
         </div>
 
       </section>
+      <section id="logos">
+        <div class="container">
+          <div class="row">
+            <div class="col d-flex justify-content-between align-itens-center">
+              <div v-for="logo in logos" class="d-flex justify-content-center align-items-center">
+                <img :src="logo" alt="logo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col d-flex flex-column justify-content-center align-items-center">
+              <p class="green"><b>REAL STORIES</b></p>
+              <h3>I am free to learn at my own place, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.</h3>
+              <img src="img/testimonial-avata-02.jpg" alt="avatar">
+              <h5>Mina Hollace</h5>
+              <p class="small-text grey">/ Freelancer</p>
+            </div>
+            <div class="col">
+              <img src="img/home-movation-testimonial-image.jpg" alt="">
+            </div>
+            <div class="circle d-flex flex-column justify-content-center align-items-center">
+              <img src="img/image.png" alt="arrow up">
+              <h4>1/4</h4>
+              <img src="img/image (1).png" alt="arrow down">
+            </div>
 
+          </div>
+
+        </div>
+
+      </section>
     </div>
     <!-- MAIN SCRIPT -->
     <script src="js/main.js" charset="utf-8"></script>

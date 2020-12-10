@@ -123,3 +123,12 @@ let onlineCourses = [
     students: '50 Students'
   }
 ];
+
+let logos = [
+  'img/client-logo-05-primary.png',
+  'img/client-logo-06-primary.png',
+  'img/client-logo-07-primary.png',
+  'img/client-logo-04-primary.png',
+  'img/client-logo-03-primary.png',
+  'img/client-logo-02-primary.png',
+];

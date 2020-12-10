@@ -5,5 +5,6 @@ const myWeb = new Vue({
     socialIcons: [...socialIcons],
     sectionNumbers: [...sectionNumbers],
     onlineCourses: [...onlineCourses],
+    logos: [...logos],
   },
 });
